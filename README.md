@@ -5,7 +5,7 @@
 - Set one SSH key in GitHub -> unset another one. No fetching or pushing anymore and vice versa.
 - Hairloss and broken keyboard due to stress of not getting it to work 👨🏻‍🦲
 
-## Solution:
+## Solution in a nutshell:
 Remove the remote and add it via another way!
 
 ## Assumptions
