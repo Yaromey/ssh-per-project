@@ -2,7 +2,7 @@
 
 ## Problems you may have:   
 - Conflicting SSH keys.
-- Set one SSH key in GitHub another project won't be able to fetch anymore and vice versa.
+- Set one SSH key in GitHub -> unset another one. No fetching or pushing anymore and vice versa.
 - Hairloss and broken keyboard due to stress of not getting it to work 👨🏻‍🦲
 
 ## Solution:
@@ -12,7 +12,8 @@ Remove the remote and add it via another way!
 1. Your email is reprecented by a unicorn! 🦄
 2. Your terminal is running in the `~/.ssh/` folder.
 3. You generated the ssh files using `ssh-keygen -t rsa -C "🦄@github.com"`
-4. You had ssh-agent running. 
+4. You had ssh-agent running so it did go without errors.
+5. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
 
 ### TLDR;   
 1. Create host file. 
