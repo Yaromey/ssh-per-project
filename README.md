@@ -44,5 +44,5 @@ const 🤓 = config;`
 
 
 1. `git remote remove origin`
-2. `git remote add origin git@🤓:callmewhateveryouwantcrazy/repository.git`
+2. `git remote add origin git@<<<🤓>>:UserNameInGitHub/existing-repo.git`
 
