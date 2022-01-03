@@ -60,5 +60,6 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
  ssh-add ~/.ssh/MY_PERSONAL_SSH_FILE
  ssh-add ~/.ssh/MY_WORK_SSH_FILE
  ssh-add ~/.ssh/MY_OTHER_SECONDARY_ACCOUNT_SSH_FILE
+fi
 ```
 
