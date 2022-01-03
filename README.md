@@ -12,8 +12,9 @@ Remove the remote and add it via another way!
 1. Your email is reprecented by a unicorn! 🦄
 2. Your terminal is running in the `~/.ssh/` folder.
 3. You generated the ssh files using `ssh-keygen -t rsa -C "🦄@youremailprovider.com"`
-4. You had ssh-agent running so it did go without errors.
-5. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
+4. You put a nice name in the file. (You're already in ~/.ssh so no need to put a path here.)
+5. You had ssh-agent running so it did go without errors.
+6. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
 
 ### TLDR;   
 1. Create host file. 
