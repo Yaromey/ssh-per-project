@@ -47,6 +47,7 @@ const 🤓 = config;`
 1. `git remote remove origin`
 2. `git remote add origin git@<<<🤓>>:UserNameInGitHub/existing-repo.git`
 3. Example:  `git remote add origin git@heyah.git.com:UserNameInGitHub/existing-repo.git`
+4. Don't forget the `.git` extension
 
 # Bonus!! --> Start your ssh agent automatically and add your keys to the agent everytime you open a Bash terminal:
 1. Go to your .bashrc file (user root directory) or just create one.
