@@ -48,3 +48,17 @@ const 🤓 = config;`
 2. `git remote add origin git@<<<🤓>>:UserNameInGitHub/existing-repo.git`
 3. Example:  `git remote add origin git@heyah.git.com:UserNameInGitHub/existing-repo.git`
 
+# Bonus!! --> Add your SSH accounts automatically in bash:
+1. Go to your .bashrc file (user root directory) or just create one.
+2. Put this code in it -- V
+```
+echo "Sourcing ~/.bash_profile - this version of Git Bash doesn't use .bashrc"
+
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+ eval `ssh-agent -s`
+ ssh-add ~/.ssh/MY_PERSONAL_SSH_FILE
+ ssh-add ~/.ssh/MY_WORK_SSH_FILE
+ ssh-add ~/.ssh/MY_OTHER_SECONDARY_ACCOUNT_SSH_FILE
+```
+
