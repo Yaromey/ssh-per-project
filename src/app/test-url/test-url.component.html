@@ -1,0 +1,73 @@
+<div>
+  <h2>URL Prefixer</h2>
+  <div class="input-item flex-input">
+    <label for="urlInput">Domain</label>
+    <select (ngModelChange)="prefixObs$.next($event)" id="prefix" [(ngModel)]="prefix"
+            [ngModelOptions]="{standalone: true}">
+      <option [ngValue]="localIp" selected>local</option>
+      <option value="https://zpam.com">zpam</option>
+      <option value="https://infracommunicatie.com">infra communictie</option>
+    </select>
+  </div>
+  <div class="input-item flex-input">
+    <!-- Add more options as needed -->
+    <label for="urlInput">Port</label>
+    <select (ngModelChange)="port$.next($event)" [value]="'4200'" id="port" [(ngModel)]="port$"
+            [ngModelOptions]="{standalone: true}">
+      <option value="3000">React</option>
+      <option value="4200">Angular</option>
+      <option value="">none</option>
+      <!-- Add more options as needed -->
+    </select>
+  </div>
+  <div class="input-item flex-input">
+    <!-- Add more options as needed -->
+    <label for="urlInput">Protocol</label>
+    <select (ngModelChange)="protocol$.next($event)" id="protocol" [(ngModel)]="prefix"
+            [ngModelOptions]="{standalone: true}">
+      <option [ngValue]="localIp" selected>angular default</option>
+      <option value="https://zpam.com">react</option>
+      <option value="https://infracommunicatie.com">none</option>
+      <!-- Add more options as needed -->
+    </select>
+  </div>
+  <hr/>
+  <form action="" (ngSubmit)="saveUrl()">
+    <div class="input-item">
+      <label for="urlName">Name:</label>
+      <input
+        id="urlName"
+        [(ngModel)]="name"
+        placeholder="url name"
+        [ngModelOptions]="{standalone: true}"
+      />
+    </div>
+    <div class="input-item">
+      <label for="urlInput">URL</label>
+      <input
+        id="urlInput"
+        type="text"
+        [(ngModel)]="currentUrl"
+        placeholder="/online/nl/"
+        [ngModelOptions]="{standalone: true}"
+      />
+    </div>
+    <button type="submit">Save URL</button>
+  </form>
+  <br/>
+  <h3>Saved URLs</h3>
+  <ul>
+    <li *ngFor="let url of savedUrls; let i = index">
+      <div class="url-display">
+        <h4>{{ url.displayUrlName }}</h4>
+        <a target="_blank"
+           href="http://{{prefixObs$ | async }}:4200/{{ url.displayUrl }}">{{ prefixObs$ | async }}
+          :4200/{{ url.displayUrl }}</a>
+      </div>
+      <div class="button-container">
+        <button (click)="copyUrl(url)">Copy</button>
+        <button (click)="deleteUrl(i)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

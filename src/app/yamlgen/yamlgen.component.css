@@ -1,0 +1,43 @@
+.container {
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, mat-slider {
+  margin-bottom: 10px;
+}
+
+.rgb-color-picker, .temperature-transition {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.yaml-preview textarea {
+  width: 100%;
+  height: 300px;
+}
+
+.rgb-preview {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.animation-preview {
+  margin-top: 20px;
+}
+
+.light-bulb {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  margin-top: 10px;
+}
+

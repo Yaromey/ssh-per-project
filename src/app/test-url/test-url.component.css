@@ -1,0 +1,81 @@
+/* test-url.component.css */
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  width: 400px;
+  margin: auto;
+}
+
+.url-display {
+  margin-bottom: 15px;
+}
+
+.button-container {
+  display: flex;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+form button {
+  margin-top: 5px
+}
+
+input {
+  width: calc(100% - 8px);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #909090;
+}
+
+button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.1)
+}
+
+.input-item {
+  margin-bottom: 7px;
+}
+
+
+li button {
+  margin-left: auto;
+}
+
+button.copy-button, button.delete-button {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+button.copy-button:hover, button.delete-button:hover {
+  background-color: #eee;
+}

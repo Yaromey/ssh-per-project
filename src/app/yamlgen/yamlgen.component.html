@@ -1,0 +1,71 @@
+<div class="container">
+  <h2>YAML Generator</h2>
+
+  <div>
+    <label for="nameInput">Name:</label>
+    <input id="nameInput" [(ngModel)]="alarm.name"/>
+  </div>
+
+  <div>
+    <label for="actionSelect">Action:</label>
+    <select id="actionSelect" [(ngModel)]="alarm.flow_params.action">
+      <option value="recover">Recover</option>
+      <option value="fade">Fade</option>
+      <!-- Add more options based on available actions in Home Assistant -->
+    </select>
+  </div>
+
+  <div>
+    <label for="countInput">Count:</label>
+    <input type="number" id="countInput" [(ngModel)]="alarm.flow_params.count"/>
+  </div>
+
+  <div *ngFor="let transition of alarm.flow_params.transitions; let i = index">
+    <h4>Transition {{ i + 1 }} {{transition}}</h4>
+    {{Object.entries(transition)}}
+    <div *ngFor="let transitionItem of Object.entries(transition)">
+      @if (transitionItem[0] === 'RGBTransition') {
+       <div *ngFor="let rgbItem of transitionItem[1]; let i = index">
+        {{rgbItem}}
+       </div>
+     }
+      <div *ngFor="let rgbItem of transitionItem[1]; let i = index">
+        <mat-slider [(ngModel)]="alarm.flow_params.transitions['RGBTransition'][0]" min="0" max="255" step="1"></mat-slider>
+      </div>
+    </div>
+
+<!--    @if (transition.RGBTransition) {-->
+<!--    <label>RGB Color:</label>-->
+<!--         <mat-slider [(ngModel)]="transition.RGBTransition[0]" min="0" max="255" step="1"></mat-slider>-->
+<!--         <mat-slider [(ngModel)]="transition.RGBTransition[1]" min="0" max="255" step="1"></mat-slider>-->
+<!--         <mat-slider [(ngModel)]="transition.RGBTransition[2]" min="0" max="255" step="1"></mat-slider>-->
+<!--         <div class="rgb-preview" [style.background]="'rgb(' + transition.RGBTransition.join(',') + ')'">-->
+<!--         </div>-->
+<!--    }-->
+<!--    @else {-->
+<!--    <label>Temperature Transition:</label>-->
+<!--    <mat-slider [(ngModel)]="transition.TemperatureTransition[0]" min="1000" max="10000" step="100"></mat-slider>-->
+<!--    <mat-slider [(ngModel)]="transition.TemperatureTransition[1]" min="1000" max="10000" step="100"></mat-slider>-->
+<!--    <mat-slider [(ngModel)]="transition.TemperatureTransition[2]" min="0" max="1" step="0.01"></mat-slider>-->
+<!--    }-->
+
+  </div>
+
+  <button (click)="generateYaml()">Generate YAML</button>
+
+  @if (yamlCode) {
+  <div class="yaml-preview">
+    <textarea [value]="yamlCode" readonly></textarea>
+  </div>
+  }
+
+
+
+
+
+  <div class="animation-preview">
+    <h3>Animation Preview</h3>
+    <!-- Add a visual representation of the animation preview, such as a light bulb image -->
+    <div class="light-bulb" [style.background]="'rgb(' + getCurrentRGB().join(',') + ')'"></div>
+  </div>
+</div>
