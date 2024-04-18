@@ -2,6 +2,7 @@
 
 ## Problems you may have with SSH:   
 - Conflicting SSH keys
+- Committing with the wrong credentials
 - Set your personal SSH key from GitHub -> unset your work SSH. Having to login manually in SSH every single time...
 - Hairloss and broken keyboard due to stress of not getting it to work 👨🏻‍🦲
 
