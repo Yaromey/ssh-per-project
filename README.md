@@ -17,9 +17,9 @@ Remove the remote and add it via another way!
 
 ### TLDR;   
 1. Create host file, probably you want to create it in `~/.ssh/` folder
-2. Name it config without any file-extensions
-3. Put a nice [subdomain].domain-name in `Host`
-4. Point to your ssh key in `IdentityFile`
+2. Name this host file "config" (without any file-extensions)
+3. Use template below to add hosts, use a nice [subdomain].domain-name in `Host` (not mistaken with Hostname!)
+4. Point to your ssh key in the field `IdentityFile`
 5. See below for example on what your file can look like
 
 ```
