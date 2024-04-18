@@ -17,12 +17,14 @@ Remove the remote and add it via another way!
 6. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
 
 ### TLDR;   
-1. Create host file. 
-2. Put a nice name in `Host`
-3. Point to your ssh key in `IdentityFile`
+1. Create host file, probably you want to create it in `~/.ssh/` folder
+2. Name it config without any file-extensions
+3. Put a nice name in `Host`
+4. Point to your ssh key in `IdentityFile`
+5. See below for example on what your file can look like
 
 ```
-# Example host file
+# Example host file (named config, probably you want to put it in .ssh folder)
 Host mebusiness.github.com     
   Hostname github.com
   IdentityFile ~/.ssh/githubpersonal   
@@ -33,15 +35,7 @@ Host mepersonal.github.com
   IdentitiesOnly yes
 ```
 
-4. _Imagine_ the config file were a javascript object and we had a key called `Host` 
-```
-const config = {
-  Host: somealias.git.com
-}
-const { Host } = config;`
-```
-
-5 Add our new remote to Git! _(And replace the emoji to the value you've used in the config file)._
+5. Add our new remote to Git! _(And replace the emoji to the value you've used in the config file)._
 
 ```
 `git remote add origin git@:username/repository.git `
