@@ -23,10 +23,14 @@ Remove the remote and add it via another way!
 
 ```
 # Example host file
-Host personal     
-Hostname github.com
-IdentityFile ~/.ssh/githubpersonal   
-IdentitiesOnly yes
+Host mebusiness.github.com     
+  Hostname github.com
+  IdentityFile ~/.ssh/githubpersonal   
+  IdentitiesOnly yes
+Host mepersonal.github.com     
+  Hostname bitbucket.com
+  IdentityFile ~/.ssh/githubpersonal   
+  IdentitiesOnly yes
 ```
 
 4. _Imagine_ the config file were a javascript object and we had a key called `Host` 
