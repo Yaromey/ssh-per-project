@@ -6,7 +6,8 @@
 - Hairloss and broken keyboard due to stress of not getting it to work 👨🏻‍🦲
 
 ## Solution in a nutshell:
-Remove your current remote (now it's porbably http instead of ssh or tied to the wrong ssh key). Add it, but via another way! 
+1. Remove your current remote (now it's porbably http instead of ssh or tied to the wrong ssh key).
+2. Add your git remote again, but via a special way. It will be linked to the ssh-key that you wish to use for you repo.
 Below I'll try to explain it to you step-by-step. Feel free to ask questions if you can't get it to work.
 
 ## Assumptions
