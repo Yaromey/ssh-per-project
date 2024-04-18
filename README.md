@@ -2,7 +2,7 @@
 
 ## Problems you may have with SSH:   
 - Conflicting SSH keys
-- Set one SSH key in GitHub -> unset another one. No fetching or pushing anymore and vice versa.
+- Set your personal SSH key from GitHub -> unset your work SSH. Having to login manually in SSH every single time...
 - Hairloss and broken keyboard due to stress of not getting it to work 👨🏻‍🦲
 
 ## Solution in a nutshell:
