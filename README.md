@@ -29,12 +29,12 @@ IdentityFile ~/.ssh/githubpersonal
 IdentitiesOnly yes
 ```
 
-4. _Imagine_ the config file were a javascript object and we had a key called `Host` represented by 🤓 
+4. _Imagine_ the config file were a javascript object and we had a key called `Host` 
 ```
 const config = {
-  🤓: nerdyguyhostname
+  Host: somealias.git.com
 }
-const 🤓 = config;`
+const { Host } = config;`
 ```
 
 5 Add our new remote to Git! _(And replace the emoji to the value you've used in the config file)._
