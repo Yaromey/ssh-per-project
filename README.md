@@ -6,7 +6,7 @@
 - Hairloss and broken keyboard due to stress of not getting it to work 👨🏻‍🦲
 
 ## Solution in a nutshell:
-Remove the remote and add it via another way!
+Remove your current remote and add it via another way!
 
 ## Assumptions
 1. Your terminal is running in the `~/.ssh/` folder.
