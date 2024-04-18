@@ -1,6 +1,6 @@
 # How to manage multiple ssh-keys & automatically load them
 
-## Problems you may have with SSH:   
+## Issues you might experience with SSH:   
 - Conflicting SSH keys
 - Committing with the wrong credentials
 - Set your personal SSH key from GitHub -> unset your work SSH. Having to login manually in SSH every single time...
@@ -14,7 +14,7 @@ Below I'll try to explain it to you step-by-step. Feel free to ask questions if 
 ## Assumptions
 1. Your terminal is running in the `~/.ssh/` folder.
 2. You generated the ssh files using `ssh-keygen -t rsa -C "example@youremailprovider.com"`
-3. You type in a filename for your ssh keys. I'd recommend to put your username in it. (PS: You're already in ~/.ssh so no need to enter path if asked in prev step)
+3. You type in a filename for your ssh keys. I'd recommend to put your username in it so you can easily link it in the next step. (PS: You're already in ~/.ssh so no need to enter path if asked in prev step)
 4. You had ssh-agent running so it did go without errors.
 5. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
 
