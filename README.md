@@ -1,4 +1,4 @@
-# How to add multiple ssh-keys, automatically load them and push to your remote repo
+# How to manage multiple ssh-keys & automatically load them
 
 ## Problems you may have with SSH:   
 - Conflicting SSH keys
