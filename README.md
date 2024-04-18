@@ -9,12 +9,11 @@
 Remove the remote and add it via another way!
 
 ## Assumptions
-1. Your email is reprecented by a unicorn! 🦄
-2. Your terminal is running in the `~/.ssh/` folder.
-3. You generated the ssh files using `ssh-keygen -t rsa -C "🦄@youremailprovider.com"`
-4. You type in a filename for your ssh keys. I'd recommend to put your username in it. (PS: You're already in ~/.ssh so no need to put a path here.)
-5. You had ssh-agent running so it did go without errors.
-6. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
+1. Your terminal is running in the `~/.ssh/` folder.
+2. You generated the ssh files using `ssh-keygen -t rsa -C "example@youremailprovider.com"`
+3. You type in a filename for your ssh keys. I'd recommend to put your username in it. (PS: You're already in ~/.ssh so no need to put a path here.)
+4. You had ssh-agent running so it did go without errors.
+5. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
 
 ### TLDR;   
 1. Create host file, probably you want to create it in `~/.ssh/` folder
@@ -43,17 +42,14 @@ Host mepersonal.github.com
 
 
 1. `git remote remove origin`
-2. `git remote add origin git@<<<🤓>>:UserNameInGitHub/existing-repo.git`
-3. Example:  `git remote add origin git@heyah.git.com:UserNameInGitHub/existing-repo.git`
+2. `git remote add origin git@<<<subdomain.domain.com>>:<<<UserNameInGitHub>>>/existing-repo.git`
+3. Example:  `git remote add origin git@me.github.com:Yaromey/existing-repo-url.git`
 4. Don't forget the `.git` extension
 
 # Bonus!! --> Start your ssh agent automatically and add your keys to the agent everytime you open a Bash terminal:
 1. Go to your .bashrc file (user root directory) or just create one.
 2. Put this code in it -- V
 ```
-echo "Sourcing ~/.bash_profile - this version of Git Bash doesn't use .bashrc"
-
-
 if [ -z "$SSH_AUTH_SOCK" ] ; then
  eval `ssh-agent -s`
  ssh-add ~/.ssh/MY_PERSONAL_SSH_FILE
