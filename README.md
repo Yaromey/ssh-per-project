@@ -1,7 +1,7 @@
-# Instructions on how to use SSH for multiple GitHub projects & multiple accounts.
+# How to add multiple ssh-keys, automatically load them and push to your remote repo
 
-## Problems you may have:   
-- Conflicting SSH keys.
+## Problems you may have with SSH:   
+- Conflicting SSH keys
 - Set one SSH key in GitHub -> unset another one. No fetching or pushing anymore and vice versa.
 - Hairloss and broken keyboard due to stress of not getting it to work 👨🏻‍🦲
 
@@ -11,7 +11,7 @@ Remove the remote and add it via another way!
 ## Assumptions
 1. Your terminal is running in the `~/.ssh/` folder.
 2. You generated the ssh files using `ssh-keygen -t rsa -C "example@youremailprovider.com"`
-3. You type in a filename for your ssh keys. I'd recommend to put your username in it. (PS: You're already in ~/.ssh so no need to put a path here.)
+3. You type in a filename for your ssh keys. I'd recommend to put your username in it. (PS: You're already in ~/.ssh so no need to enter path if asked in prev step)
 4. You had ssh-agent running so it did go without errors.
 5. You pasted your beautifullfilename.pub contents to Github via [GitHub (add SSH key link)](https://github.com/settings/ssh/new)
 
